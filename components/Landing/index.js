@@ -29,31 +29,31 @@ export default function Landing() {
     setShowLoading(false);
   }
 
-  // Function where the animations are executed
-  const triggerAnimation = (index) => {
-    switch (index) {
-      case 0:
-        screen.current.emitEvent('keyUp', 'screen');
-        break;
-      case 1:
-        mac.current.emitEvent('keyDown', 'Group');
-        break;
-      case 2:
-        camera.current.emitEvent('keyDown', 'camera');
-        toggleTheme(!theme);
-        break;
-    }
-  }
-  React.useEffect(() => {
-    if (wheelState > 0) {
-      setAnimation(animation + 1);
-      triggerAnimation(animation);
-    }
-    if (wheelState < 0) {
-      setAnimation(animation - 1);
-      triggerAnimation(animation);
-    }
-  }, [wheelState]);
+  // // Function where the animations are executed
+  // const triggerAnimation = (index) => {
+  //   switch (index) {
+  //     case 0:
+  //       screen.current.emitEvent('keyUp', 'screen');
+  //       break;
+  //     case 1:
+  //       mac.current.emitEvent('keyDown', 'Group');
+  //       break;
+  //     case 2:
+  //       camera.current.emitEvent('keyDown', 'camera');
+  //       toggleTheme(!theme);
+  //       break;
+  //   }
+  // }
+  // React.useEffect(() => {
+  //   if (wheelState > 0) {
+  //     setAnimation(animation + 1);
+  //     triggerAnimation(animation);
+  //   }
+  //   if (wheelState < 0) {
+  //     setAnimation(animation - 1);
+  //     triggerAnimation(animation);
+  //   }
+  // }, [wheelState]);
 
   return (
     <main onWheel={handleWheel}>
@@ -71,7 +71,7 @@ export default function Landing() {
           <Intro />
         )
       }
-      {
+      {/* {
         animation == 3 && (
           <MyProjects />
         )
@@ -80,7 +80,7 @@ export default function Landing() {
         animation > 4 && (
           <Achievements />
         )
-      }
+      } */}
       <section className="animation">
         <Spline
           scene="https://prod.spline.design/t85kkg3PU-gkguwO/scene.splinecode"

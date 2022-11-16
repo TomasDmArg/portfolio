@@ -40,11 +40,11 @@ export default function Intro() {
         </p>
         <section className="main__action">
           <Group>
-            <button className="button--main">
+            <button className="button--main" onClick={() => window.open("mailto:tomas@tdm.ar", "__blank")}>
               Contacto
             </button>
-            <button className="button">
-              Mi blog
+            <button className="button" onClick={() => window.open("https://www.linkedin.com/in/tomasdm/", "__blank")}>
+              LinkedIn
             </button>
           </Group>
         </section>
