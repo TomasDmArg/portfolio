@@ -11,8 +11,9 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';
 import Image from 'next/image';
+import React from 'react';
 const HEADER_HEIGHT = 60;
-import { useTheme } from '../../context';
+
 const useStyles = createStyles((theme) => ({
   inner: {
     height: HEADER_HEIGHT,
@@ -54,7 +55,7 @@ const useStyles = createStyles((theme) => ({
 
 
 export default function HeaderAction({ links }) {
-  const { theme, toggleTheme } = useTheme();
+  const [theme, setTheme] = React.useState(true);
   const { classes } = useStyles();
   const [opened, { toggle }] = useDisclosure(false);
   const items = links.map((link) => {

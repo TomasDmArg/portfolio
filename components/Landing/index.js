@@ -11,7 +11,6 @@ export default function Landing() {
   const [animation, setAnimation] = React.useState(0);
   const [wheelState, setWheelState] = React.useState(0);
 
-  const { theme, toggleTheme } = useTheme();
   // Each time the wheel is scrolled, the state is updated
   const handleWheel = (e) => {
     setWheelState(e.deltaY);
